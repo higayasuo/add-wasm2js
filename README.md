@@ -3,44 +3,43 @@
 [![npm version](https://badge.fury.io/js/add-wasm2js.svg)](https://badge.fury.io/js/add-wasm2js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Tool to add wasm2js-template to your project
+CLI tool to add wasm2js template to your wasm-pack project.
 
 ## Prerequisites
 
 - Node.js (v16 or later)
+- [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
 - [Binaryen](https://github.com/WebAssembly/binaryen) (for wasm2js)
   ```bash
   brew install binaryen
   ```
 
-## Installation
-
-```bash
-npm install -g add-wasm2js
-# or
-npx add-wasm2js
-```
-
 ## Usage
 
-Navigate to your project directory and run:
+1. First, create a new wasm-pack project:
 
-```bash
-add-wasm2js
-```
+   ```bash
+   wasm-pack new my-wasm-project
+   cd my-wasm-project
+   ```
 
-This will:
+2. Then, add wasm2js support:
+   ```bash
+   npx add-wasm2js
+   ```
 
-1. Clone the wasm2js template
-2. Install dependencies
-3. Update Cargo dependencies
-4. Build the project
+This will create a `wasm2js` directory in your project with:
+
+- Frontend development environment
+- Build scripts for wasm2js
+- Development server setup
 
 ## Testing Your WASM Module
 
-After installation, you can test your WASM module by running:
+After setup, you can test your WASM module:
 
 ```bash
+cd wasm2js
 npm run dev
 ```
 
@@ -48,15 +47,17 @@ The template includes a default "greet" function test. To test your own function
 
 ## Project Structure
 
-The template sets up a project with the following structure:
+After running `add-wasm2js`, your project will look like this:
 
 ```
-your-project/
-├── frontend/          # Frontend code
-│   └── src/
-│       └── main.ts   # Main entry point (modify this for your tests)
-├── src/              # Rust source code
-└── ...
+my-wasm-project/          # Your wasm-pack project root
+├── src/                  # Rust source code
+├── Cargo.toml
+└── wasm2js/             # wasm2js specific files
+    ├── frontend/        # Frontend code
+    │   └── src/
+    │       └── main.ts  # Test your functions here
+    └── ...
 ```
 
 ## Development
@@ -73,10 +74,13 @@ To contribute to this project:
    npm test
    ```
 
-## License
-
-MIT
-
 ## Author
 
-Yasuo Higa
+**Yasuo Higa**
+
+- GitHub: [@higayasuo](https://github.com/higayasuo)
+- X: [@yasuo_higa](https://x.com/yasuo_higa)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
