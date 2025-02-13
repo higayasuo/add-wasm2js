@@ -1,6 +1,6 @@
 {
   "name": "add-wasm2js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "CLI tool to add Wasm2JS template to existing projects",
   "main": "dist/cli.js",
   "bin": {

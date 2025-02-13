@@ -1,6 +1,11 @@
 # Changelog
 
-## [1.0.1] - 2025-02-14
+## [1.1.0] - 2025-02-14
+
+### Added
+
+- Support for coexistence with wasm-pack projects
+- Improved documentation with wasm-pack integration steps
 
 ### Changed
 
