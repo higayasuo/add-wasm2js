@@ -1,0 +1,7 @@
+src/
+.prettierrc
+.gitignore
+vite.config.ts
+tsconfig.json
+*.log
+**/__tests__/**

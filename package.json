@@ -1,0 +1,40 @@
+{
+  "name": "add-wasm2js",
+  "version": "1.0.1",
+  "description": "CLI tool to add Wasm2JS template to existing projects",
+  "main": "dist/cli.js",
+  "bin": {
+    "add-wasm2js": "./dist/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test": "NODE_ENV=test vitest"
+  },
+  "keywords": ["wasm", "rust", "javascript", "cli", "template", "wasm2js"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tiged": "^2.12.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/higayasuo/add-wasm2js"
+  },
+  "bugs": {
+    "url": "https://github.com/higayasuo/add-wasm2js/issues"
+  },
+  "homepage": "https://github.com/higayasuo/add-wasm2js#readme",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  }
+}
