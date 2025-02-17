@@ -34,6 +34,9 @@ This will create a `wasm2js` directory in your project with:
 - Build scripts for wasm2js
 - Development server setup
 
+For detailed information about the template and its features, please visit:
+[wasm2js-template](https://github.com/higayasuo/wasm2js-template)
+
 ## Testing Your WASM Module
 
 After setup, you can test your WASM module:
@@ -50,14 +53,18 @@ The template includes a default "greet" function test. To test your own function
 After running `add-wasm2js`, your project will look like this:
 
 ```
-my-wasm-project/          # Your wasm-pack project root
-├── src/                  # Rust source code
+my-wasm-project/               # Your wasm-pack project root
+├── src/                       # Rust source code
 ├── Cargo.toml
-└── wasm2js/             # wasm2js specific files
-    ├── frontend/        # Frontend code
+└── wasm2js/                  # wasm2js specific files
+    ├── frontend/             # Frontend code
     │   └── src/
-    │       └── main.ts  # Test your functions here
-    └── ...
+    │       └── main.ts      # Test your functions here
+    ├── scripts/              # Build and utility scripts
+    │   ├── wasm2js.js
+    │   ├── create-zip.js
+    │   └── update-cargo-deps.js
+    └── package.json          # Dependencies and build scripts
 ```
 
 ## Development
